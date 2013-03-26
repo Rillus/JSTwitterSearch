@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+	.tweet {
+		clear:both;
+	}
+	.tweet img {
+		clear:left;
+		float:left;
+	}
+	.tweet h2 {
+		float:left;
+		margin:10px 20px;
+	}
+	.tweet p {
+		float:left;
+		margin:15px 0;
+	}
+</style>
+
+</head>
+
+<body>
+	<input id="search" type="text" placeholder="search">
+	<button id="go">Go</button>
+	<div id="results"></div>
+
+    <script type="template" id="tweet-template">
+		<div class="tweet">
+			<a href="http://twitter.com/{{from_user}}" target="_blank">
+				<img src="{{profile_image_url}}" class="tweet-image" />
+				<h2>{{from_user_name}}</h2>
+			</a>
+			<p>{{text}}</p>
+		</div>
+    </script>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+	<script src="js/script2.js" type="text/javascript"></script>
+</body>
+</html>
