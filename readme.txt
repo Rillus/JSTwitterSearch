@@ -1,1 +1,1 @@
-A simple JQuery plugin and template to generate Twitter search results based omn user input
+A simple JQuery plugin and template to generate Twitter search results based on user input
