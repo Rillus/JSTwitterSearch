@@ -1,8 +1,4 @@
 // input field
-$("#go").click(function(){
-	showResults($("#search").val());
-})
-
 function showResults(str) {
 	if (str.length==0) { 
 		$("#results").empty();
@@ -20,7 +16,7 @@ function showResults(str) {
 		},
 		fail: function() {
 			return false;
-		},
+		}
 	});
 }
 
@@ -29,10 +25,17 @@ function replaceWithData(template, data) {
 	var html_template = template, 
 		prop;
 	for (prop in data) {
-		html_template = html_template.replace('{{' + prop + '}}', data[prop]);
+		if (data.hasOwnProperty(prop)) {
+			html_template = html_template.replace('{{' + prop + '}}', data[prop]);
+		}
 	}
 	return html_template;
 }
+$(document).ready(function() {
+	$("#go").click(function(){
+		showResults($("#search").val());
+	})
+});
 
 
 
